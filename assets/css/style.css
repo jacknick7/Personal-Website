@@ -52,7 +52,7 @@ h1{
 }
 
 .image-url{
-    border-radius: 50%;
+    border-radius: 25%;
     height: 1cm;
     width: 1cm;
 }
@@ -68,6 +68,7 @@ h1{
 
 .div-main{
     margin-left: 34vh;
+    margin-right: 17vh;
     background-color: white;
 }
 
@@ -91,6 +92,7 @@ h1{
 h2{
     font-size: 2rem;
     font-weight: bold;
+    color: black;
 }
 
 .section-body-main{
@@ -125,6 +127,7 @@ h3{
     margin-top: 0;
     margin-bottom: .25rem;
     font-weight: bold;
+    color: black;
 }
 
 a{
@@ -143,4 +146,13 @@ footer{
     text-align: center;
     color: white;
     padding: 0.1rem;
+}
+
+.right-side{
+    position: fixed;
+    right: 0vh;
+    top: 0vh;
+    height: 100vh;
+    width: 17vh;
+    background-color: BlueViolet;
 }
