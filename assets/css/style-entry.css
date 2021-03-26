@@ -168,11 +168,21 @@ article{
     .div-main-entry{
         max-width: 1140px;
     }
+
+    iframe{
+        height: 405px !important;
+        width: 720px !important;
+    }
 }
 
 @media (min-width: 992px) {
     .div-main-entry{
         max-width: 960px;
+    }
+
+    iframe{
+        height: 405px !important;
+        width: 720px !important;
     }
 }
 
@@ -180,6 +190,16 @@ article{
     .div-main-entry{
         max-width: 720px;
     }
+
+    iframe{
+        height: 405px !important;
+        width: 720px !important;
+    }
+}
+
+iframe{
+    height: 252px;
+    width: 448px;
 }
 
 h2{
