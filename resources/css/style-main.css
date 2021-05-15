@@ -143,7 +143,7 @@ h1{
 }
 
 .section-title-main{
-    background-color: #FAFAFA;
+    background-color: #F5F5F5;
     padding-top: 3rem;
     padding-bottom: 3rem;
     padding-right: 3rem;
@@ -220,9 +220,9 @@ a{
 }
 
 footer{
-    background-color: LimeGreen;
+    background-color: #F5F5F5;
     text-align: center;
-    color: white;
+    color: black;
     padding: 0.1rem;
 }
 
