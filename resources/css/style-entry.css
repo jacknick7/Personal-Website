@@ -14,7 +14,7 @@ header{
     top: 0vh;
     height: 100vh;
     width: 34vh;
-    background-color: BlueViolet;
+    background-color: #404040;
     text-align: center;
     color: white;
 }
@@ -330,7 +330,8 @@ a{
 footer{
     background-color: #F5F5F5;
     text-align: center;
-    color: black;
+    color: #4f4f4f;
+    font-size: 0.8125rem;
     padding: 0.1rem;
 }
 
@@ -340,7 +341,7 @@ footer{
     top: 0vh;
     height: 100vh;
     width: 17vh;
-    background-color: BlueViolet;
+    background-color: #404040;
 }
 
 @media (max-width: 991.98px) {
