@@ -7,7 +7,7 @@
         <meta name="author" content="Josep Ciurana">
         <link rel="shortcut icon" href="../shorticon.jpg">
         <link rel="stylesheet" type="text/css" href="../resources/css/style-entry.css">
-        <title>Josep Ciurana | Automatic flower recognition</title>
+        <title>Josep Ciurana | Hashing practice</title>
     </head>
     <body>
         <header>
@@ -37,8 +37,8 @@
         <div class="div-main">
             <article>
                 <div class="div-main-entry">
-                    <h2>Automatic flower recognition</h2>
-                    <div class="entry-text-extra">Projects | Published September 2020 | 10 min read</div>
+                    <h2>Hashing practice</h2>
+                    <div class="entry-text-extra">Projects | Published June 2020 | 5 min read</div>
                     <div>
                         <figure class="entry-banner">
                             <img class="image-figure" src="../resources/images/projects/automatic-flower-recognition/flowers.png" alt="Does Not Compute UI">
@@ -48,24 +48,7 @@
                             The objective with this project was to design and implement a MATLAB program to automatically classify flower
                             images. Given both train/test sets we had to select the classifier and the features that resulted in better
                             empirical results. <br><br>
-                            The first part of the project consisted in choosing the classifier and features that provided the most accurate
-                            result (note: neural networks were not allowed for this project). After some experimentation with the test set
-                            that was already segmented (more of this in the second part) and our knowledge in the matter, we decided to use
-                            a support-vector machine (SVM) as our classifier. We also decided to use the following flower features for the
-                            classification:
-                        </p>
-                        <ul class="entry-ul">
-                            <li>Mean of the flower color</li>
-                            <li>Standard deviation of the flower color</li>
-                            <li>Compactness of the image</li>
-                            <li>Number of vertices</li>
-                            <li>Histogram of oriented gradients (HOG)</li>
-                        </ul>
-                        <p class="entry-p">
-                            The second part consisted in obtaining the segmented flower from each image in the test set that wasn't already
-                            segmented, we chose to use automatic segmentation by applying different MATLAB procedures. This is done by obtaining
-                            the threshold of the image and with this value there's a procedure that should obtain the countourn of the flower.
-                            We then improve the countourn and apply it to the original image as a mask.
+                            [Talk about the chosen classifier and the features]
                         </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/automatic-flower-recognition/segmentation.png" alt="Does Not Compute menu">
@@ -77,37 +60,42 @@
                         </p>
                         <table>
                           <tr>
-                            <th></th>
-                            <th><b>Mean accuracy (1)</b></th>
-                            <th><b>Mean accuracy (2)</b></th>
+                            <th>Company</th>
+                            <th>Contact</th>
+                            <th>Country</th>
                           </tr>
                           <tr>
-                            <td><b>Mean of the flower color</b></td>
-                            <td>0.2877</td>
-                            <td>0.1678</td>
+                            <td>Alfreds Futterkiste</td>
+                            <td>Maria Anders</td>
+                            <td>Germany</td>
                           </tr>
                           <tr>
-                            <td><b>+Standard deviation of the flower color</b></td>
-                            <td>0.4969</td>
-                            <td>0.2815</td>
+                            <td>Centro comercial Moctezuma</td>
+                            <td>Francisco Chang</td>
+                            <td>Mexico</td>
                           </tr>
                           <tr>
-                            <td><b>+Compactness of the image</b></td>
-                            <td>0.6148</td>
-                            <td>0.3215</td>
+                            <td>Ernst Handel</td>
+                            <td>Roland Mendel</td>
+                            <td>Austria</td>
                           </tr>
                           <tr>
-                            <td><b>+Number of vertices</b></td>
-                            <td>0.6767</td>
-                            <td>0.4107</td>
+                            <td>Island Trading</td>
+                            <td>Helen Bennett</td>
+                            <td>UK</td>
                           </tr>
                           <tr>
-                            <td><b>+HOG</b></td>
-                            <td>0.7804</td>
-                            <td>0.5904</td>
+                            <td>Laughing Bacchus Winecellars</td>
+                            <td>Yoshi Tannamuri</td>
+                            <td>Canada</td>
+                          </tr>
+                          <tr>
+                            <td>Magazzini Alimentari Riuniti</td>
+                            <td>Giovanni Rovelli</td>
+                            <td>Italy</td>
                           </tr>
                         </table>
-                        <figcaption class="text-figure">Mean accuracy of 15 iterations of the classifier. (1): pre apply segmentation, (2): automatic segmentation</figcaption>
+                        <figcaption class="text-figure">Main menu of the game</figcaption>
                     </div>
                 </div>
             </article>

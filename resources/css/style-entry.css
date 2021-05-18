@@ -350,6 +350,13 @@ footer{
     }
 }
 
+.entry-ul{
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-top: -0.625rem;
+    margin-bottom: 1rem;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
