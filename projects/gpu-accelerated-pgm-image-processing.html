@@ -45,27 +45,62 @@
                             <figcaption class="text-figure">Using the high parallelization capabilities of GPUs to speed up image processing</figcaption>
                         </figure>
                         <p class="entry-p">
-                            The objective with this project was to design and implement a MATLAB program to automatically classify flower
-                            images. Given both train/test sets we had to select the classifier and the features that resulted in better
-                            empirical results. <br><br>
-                            [Talk about the chosen classifier and the features]
+                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
+                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
+                            is easy). We processed the PGM input image by applying some of the well known filters to the image (which consists
+                            in using a kernel with a specific calibration) in order to obtain the output image. Because the kernel is applied
+                            to each pixel of the image we can parallelize this in order to speed up the process and use GPU’s CUs to calculate
+                            the result. Next we will present the used filters and the time saved by using a GPU.<br><br>
+                            <u>Sobel filter</u>
                         </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/sobel-filter.png" alt="Sobel filter image">
                             <figcaption class="text-figure">Sobel filter example. From left to right: input image and output image</figcaption>
                         </figure>
+                        <p class="entry-p">
+                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
+                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
+                            is easy).
+                        </p>
+                        <p class="entry-p">
+                            <u>Downsampling</u>
+                        </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/downsampling.png" alt="Downsampling image">
                             <figcaption class="text-figure">Downsampling example. From left to right: input image and output image</figcaption>
                         </figure>
+                        <p class="entry-p">
+                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
+                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
+                            is easy).
+                        </p>
+                        <p class="entry-p">
+                            <u>Gauss filter</u>
+                        </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/gauss-filter.png" alt="Gauss filter image">
                             <figcaption class="text-figure">Gauss filter example. From left to right: input image and output image</figcaption>
                         </figure>
+                        <p class="entry-p">
+                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
+                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
+                            is easy).
+                        </p>
+                        <p class="entry-p">
+                            <u>Brightness variation</u>
+                        </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/brightness-variation.png" alt="Brightness variation image">
                             <figcaption class="text-figure">Brightness variation example. From left to right: input image, output image with higher brightness and output image with lower brightness</figcaption>
                         </figure>
+                        <p class="entry-p">
+                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
+                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
+                            is easy).
+                        </p>
+                        <p class="entry-p">
+                            <u>Sharpening filter</u>
+                        </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/sharpening-filter.png" alt="Sharpening filter image">
                             <figcaption class="text-figure">Sharpening filter example. From left to right: input image, output image with High-Pass filter and output image with Low-Pass filter</figcaption>
