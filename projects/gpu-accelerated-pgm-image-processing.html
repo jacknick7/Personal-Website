@@ -59,22 +59,22 @@
                         <p class="entry-p">
                             The Sobel filter is used in image processing and computer vision, particularly within edge detection algorithms where it creates an image
                             emphasising edges. Technically, it is a discrete differentiation operator, computing an approximation of the gradient of the image intensity
-                            function. The next table shows the speed up of our GPU accelerated program versus a basic execution:
+                            function. The next table shows the speed up of our GPU accelerated program versus a sequential execution:
                         </p>
                         <figure>
                             <table>
                               <tr>
                                 <th></th>
-                                <th>Basic execution</th>
-                                <th>GPU accelerated execution</th>
+                                <th>Sequential version</th>
+                                <th>GPU accelerated version</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>0</td>
-                                <td>0</td>
+                                <td>2.7373952</td>
+                                <td>1.5257344</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Sobel filter</figcaption>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Sobel filter</figcaption>
                         </figure>
                         <p class="entry-p">
                             <br><u>Downsampling</u>
@@ -86,22 +86,23 @@
                         <p class="entry-p">
                             Downsampling is the process of rendering an image at resolutions above native and then converting it to native resolution. If the process
                             is done correctly, the output image has better image quality (IQ) than a native resolution image because it has more information to work
-                            with. The following table shows the speed up of our GPU accelerated program versus a basic execution:
+                            with. The following table shows the negative speed up of our GPU accelerated program versus a sequential execution (too much overhead,
+                            should work as expected with bigger images):
                         </p>
                         <figure>
                             <table>
                               <tr>
                                 <th></th>
-                                <th>Basic execution</th>
-                                <th>GPU accelerated execution</th>
+                                <th>Sequential version</th>
+                                <th>GPU accelerated version</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>0</td>
-                                <td>0</td>
+                                <td>0,1817216</td>
+                                <td>1,744896</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Downsampling</figcaption>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Downsampling</figcaption>
                         </figure>
                         <p class="entry-p">
                             <br><u>Gauss filter</u>
@@ -113,22 +114,22 @@
                         <p class="entry-p">
                             In image processing, a Gauss filter is the result of blurring an image by a Gaussian function. It is a widely used effect in graphics software,
                             typically to reduce image noise and reduce detail. The visual effect of this blurring technique is a smooth blur resembling that of viewing the
-                            image through a translucent screen. The following table shows the speed up of our GPU accelerated program versus a basic execution:
+                            image through a translucent screen. The following table shows the speed up of our GPU accelerated program versus a sequential execution:
                         </p>
                         <figure>
                             <table>
                               <tr>
                                 <th></th>
-                                <th>Basic execution</th>
-                                <th>GPU accelerated execution</th>
+                                <th>Sequential version</th>
+                                <th>GPU accelerated version</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>0</td>
-                                <td>0</td>
+                                <td>5.2803908</td>
+                                <td>2.4202112</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Gauss filter</figcaption>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Gauss filter</figcaption>
                         </figure>
                         <p class="entry-p">
                             <br><u>Brightness variation</u>
@@ -138,51 +139,59 @@
                             <figcaption class="text-figure">Brightness variation example. From left to right: input image, output image with higher brightness and output image with lower brightness</figcaption>
                         </figure>
                         <p class="entry-p">
-                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
-                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
-                            is easy).
+                            This filter is commonly used to highlight objects in too dark or too light images. Basically the filter is in charge of increasing or decreasing the
+                            value of each pixel equivalently. By doing this we can vary the intensity of the brightness in the image. The following table shows the negative speed
+                            up of our GPU accelerated program versus a sequential execution (probably for the same reason as with Downsampling):
                         </p>
                         <figure>
                             <table>
                               <tr>
                                 <th></th>
-                                <th>Basic execution</th>
-                                <th>GPU accelerated execution</th>
+                                <th>Sequential version</th>
+                                <th>GPU accelerated version</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>0</td>
-                                <td>0</td>
+                                <td>0.6947258</td>
+                                <td>1.2087168</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Brightness variation</figcaption>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Brightness variation</figcaption>
                         </figure>
                         <p class="entry-p">
-                            <br><u>Sharpening filter</u>
+                            <br><u>Sharpening filters</u>
                         </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/sharpening-filter.png" alt="Sharpening filter image">
                             <figcaption class="text-figure">Sharpening filter example. From left to right: input image, output image with High-Pass filter and output image with Low-Pass filter</figcaption>
                         </figure>
                         <p class="entry-p">
-                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
-                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
-                            is easy).
+                            This type of filtering is used to highlight different characteristics of the image. In our case two filters have been
+                            used, the first one, called High-Pass filter makes use of the convolution products and highlights the pixels
+                            with higher frequency over the rest. It is used to highlight small details over the rest. The other filter implemented
+                            is a counterpart to the previous one, called Low-Pass filter, which highlights the pixels with lower frequency, thus
+                            covering the details of the image, generating a "flatter" image. The following table shows the mixed results of our
+                            GPU accelerated program versus a sequential execution:
                         </p>
                         <figure>
                             <table>
                               <tr>
                                 <th></th>
-                                <th>Basic execution</th>
-                                <th>GPU accelerated execution</th>
+                                <th>Sequential version</th>
+                                <th>GPU accelerated version</th>
                               </tr>
                               <tr>
-                                <td><b>Mean</b></td>
-                                <td>0</td>
-                                <td>0</td>
+                                <td><b>High-Pass Mean</b></td>
+                                <td>2.3634624</td>
+                                <td>1.733152</td>
+                              </tr>
+                              <tr>
+                                <td><b>Low-Pass Mean</b></td>
+                                <td>1.4051648</td>
+                                <td>1.7541376</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Sharpening filter</figcaption>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Sharpening filters</figcaption>
                         </figure>
                     </div>
                 </div>
