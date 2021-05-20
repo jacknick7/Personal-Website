@@ -45,12 +45,11 @@
                             <figcaption class="text-figure">Using the high parallelization capabilities of GPUs to speed up image processing</figcaption>
                         </figure>
                         <p class="entry-p">
-                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
-                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
-                            is easy). We processed the PGM input image by applying some of the well known filters to the image (which consists
-                            in using a kernel with a specific calibration) in order to obtain the output image. Because the kernel is applied
-                            to each pixel of the image we can parallelize this in order to speed up the process and use GPU’s CUs to calculate
-                            the result. Next we will present the used filters and the time saved by using a GPU.<br><br>
+                            For this project we used a GPU to accelerate image processing. Due to a limitation while working with CUDA that we were unable to solve,
+                            the input images that we used were in PGM format (conversion from JPG or PNG to PGM is simple and quick). We processed the PGM image by
+                            applying some of the well-known filters to the image (which consists in using a kernel with a specific calibration) in order to obtain
+                            the output image. Because the kernel is applied to each pixel of the image, we can parallelize it in order to speed up the process and
+                            use GPU’s CUs to calculate the result. In the following lines we will present the used filters and the time saved by using a GPU.<br><br>
                             <u>Sobel filter</u>
                         </p>
                         <figure>
@@ -58,36 +57,81 @@
                             <figcaption class="text-figure">Sobel filter example. From left to right: input image and output image</figcaption>
                         </figure>
                         <p class="entry-p">
-                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
-                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
-                            is easy).
+                            The Sobel filter is used in image processing and computer vision, particularly within edge detection algorithms where it creates an image
+                            emphasising edges. Technically, it is a discrete differentiation operator, computing an approximation of the gradient of the image intensity
+                            function. The next table shows the speed up of our GPU accelerated program versus a basic execution:
                         </p>
+                        <figure>
+                            <table>
+                              <tr>
+                                <th></th>
+                                <th>Basic execution</th>
+                                <th>GPU accelerated execution</th>
+                              </tr>
+                              <tr>
+                                <td><b>Mean</b></td>
+                                <td>0</td>
+                                <td>0</td>
+                              </tr>
+                            </table>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Sobel filter</figcaption>
+                        </figure>
                         <p class="entry-p">
-                            <u>Downsampling</u>
+                            <br><u>Downsampling</u>
                         </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/downsampling.png" alt="Downsampling image">
                             <figcaption class="text-figure">Downsampling example. From left to right: input image and output image</figcaption>
                         </figure>
                         <p class="entry-p">
-                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
-                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
-                            is easy).
+                            Downsampling is the process of rendering an image at resolutions above native and then converting it to native resolution. If the process
+                            is done correctly, the output image has better image quality (IQ) than a native resolution image because it has more information to work
+                            with. The following table shows the speed up of our GPU accelerated program versus a basic execution:
                         </p>
+                        <figure>
+                            <table>
+                              <tr>
+                                <th></th>
+                                <th>Basic execution</th>
+                                <th>GPU accelerated execution</th>
+                              </tr>
+                              <tr>
+                                <td><b>Mean</b></td>
+                                <td>0</td>
+                                <td>0</td>
+                              </tr>
+                            </table>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Downsampling</figcaption>
+                        </figure>
                         <p class="entry-p">
-                            <u>Gauss filter</u>
+                            <br><u>Gauss filter</u>
                         </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/gauss-filter.png" alt="Gauss filter image">
                             <figcaption class="text-figure">Gauss filter example. From left to right: input image and output image</figcaption>
                         </figure>
                         <p class="entry-p">
-                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
-                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
-                            is easy).
+                            In image processing, a Gauss filter is the result of blurring an image by a Gaussian function. It is a widely used effect in graphics software,
+                            typically to reduce image noise and reduce detail. The visual effect of this blurring technique is a smooth blur resembling that of viewing the
+                            image through a translucent screen. The following table shows the speed up of our GPU accelerated program versus a basic execution:
                         </p>
+                        <figure>
+                            <table>
+                              <tr>
+                                <th></th>
+                                <th>Basic execution</th>
+                                <th>GPU accelerated execution</th>
+                              </tr>
+                              <tr>
+                                <td><b>Mean</b></td>
+                                <td>0</td>
+                                <td>0</td>
+                              </tr>
+                            </table>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Gauss filter</figcaption>
+                        </figure>
                         <p class="entry-p">
-                            <u>Brightness variation</u>
+                            <br><u>Brightness variation</u>
                         </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/brightness-variation.png" alt="Brightness variation image">
@@ -98,55 +142,48 @@
                             that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
                             is easy).
                         </p>
+                        <figure>
+                            <table>
+                              <tr>
+                                <th></th>
+                                <th>Basic execution</th>
+                                <th>GPU accelerated execution</th>
+                              </tr>
+                              <tr>
+                                <td><b>Mean</b></td>
+                                <td>0</td>
+                                <td>0</td>
+                              </tr>
+                            </table>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Brightness variation</figcaption>
+                        </figure>
                         <p class="entry-p">
-                            <u>Sharpening filter</u>
+                            <br><u>Sharpening filter</u>
                         </p>
                         <figure>
                             <img class="image-figure" src="../resources/images/projects/gpu-accelerated-pgm-image-processing/sharpening-filter.png" alt="Sharpening filter image">
                             <figcaption class="text-figure">Sharpening filter example. From left to right: input image, output image with High-Pass filter and output image with Low-Pass filter</figcaption>
                         </figure>
-                        <br />
                         <p class="entry-p">
-                            [Talk about the results]
+                            As the title implies, we used a GPU to accelerate image processing. Due to a limitation while working with CUDA
+                            that we were unable to solve, input images must be in PGM format (no big deal, conversion from JPG or PNG to PGM
+                            is easy).
                         </p>
-                        <table>
-                          <tr>
-                            <th>Company</th>
-                            <th>Contact</th>
-                            <th>Country</th>
-                          </tr>
-                          <tr>
-                            <td>Alfreds Futterkiste</td>
-                            <td>Maria Anders</td>
-                            <td>Germany</td>
-                          </tr>
-                          <tr>
-                            <td>Centro comercial Moctezuma</td>
-                            <td>Francisco Chang</td>
-                            <td>Mexico</td>
-                          </tr>
-                          <tr>
-                            <td>Ernst Handel</td>
-                            <td>Roland Mendel</td>
-                            <td>Austria</td>
-                          </tr>
-                          <tr>
-                            <td>Island Trading</td>
-                            <td>Helen Bennett</td>
-                            <td>UK</td>
-                          </tr>
-                          <tr>
-                            <td>Laughing Bacchus Winecellars</td>
-                            <td>Yoshi Tannamuri</td>
-                            <td>Canada</td>
-                          </tr>
-                          <tr>
-                            <td>Magazzini Alimentari Riuniti</td>
-                            <td>Giovanni Rovelli</td>
-                            <td>Italy</td>
-                          </tr>
-                        </table>
-                        <figcaption class="text-figure">Main menu of the game</figcaption>
+                        <figure>
+                            <table>
+                              <tr>
+                                <th></th>
+                                <th>Basic execution</th>
+                                <th>GPU accelerated execution</th>
+                              </tr>
+                              <tr>
+                                <td><b>Mean</b></td>
+                                <td>0</td>
+                                <td>0</td>
+                              </tr>
+                            </table>
+                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each program of the Sharpening filter</figcaption>
+                        </figure>
                     </div>
                 </div>
             </article>
