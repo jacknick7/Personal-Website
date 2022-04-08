@@ -7,7 +7,7 @@
         <meta name="author" content="Josep Ciurana">
         <link rel="shortcut icon" href="../favicon.ico">
         <link rel="stylesheet" type="text/css" href="../resources/css/style-entry.css">
-        <title>Josep Ciurana Herrera | GPU accelerated PGM image processing</title>
+        <title>Josep Ciurana Herrera | Projects | GPU accelerated PGM image processing</title>
     </head>
     <body>
         <header>
@@ -67,14 +67,16 @@
                                 <th></th>
                                 <th>Sequential version</th>
                                 <th>GPU accelerated version</th>
+                                <th>Speedup</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>2.7373952</td>
-                                <td>1.5257344</td>
+                                <td>2.7373952 s</td>
+                                <td>1.5257344 s</td>
+                                <td>1.7941492</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Sobel filter</figcaption>
+                            <figcaption class="text-figure">Mean time of 5 iterations for each version of the Sobel filter and mean speedup</figcaption>
                         </figure>
                         <p class="entry-p">
                             <br><u>Downsampling</u>
@@ -95,14 +97,16 @@
                                 <th></th>
                                 <th>Sequential version</th>
                                 <th>GPU accelerated version</th>
+                                <th>Speedup</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>0.1817216</td>
-                                <td>1.744896</td>
+                                <td>0.1817216 s</td>
+                                <td>1.7448960 s</td>
+                                <td>0.1041447</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Downsampling</figcaption>
+                            <figcaption class="text-figure">Mean time of 5 iterations for each version of the Downsampling and mean speedup</figcaption>
                         </figure>
                         <p class="entry-p">
                             <br><u>Gauss filter</u>
@@ -122,14 +126,16 @@
                                 <th></th>
                                 <th>Sequential version</th>
                                 <th>GPU accelerated version</th>
+                                <th>Speedup</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>5.2803908</td>
-                                <td>2.4202112</td>
+                                <td>5.2803908 s</td>
+                                <td>2.4202112 s</td>
+                                <td>2.1817892</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Gauss filter</figcaption>
+                            <figcaption class="text-figure">Mean time of 5 iterations for each version of the Gauss filter and mean speedup</figcaption>
                         </figure>
                         <p class="entry-p">
                             <br><u>Brightness variation</u>
@@ -149,14 +155,16 @@
                                 <th></th>
                                 <th>Sequential version</th>
                                 <th>GPU accelerated version</th>
+                                <th>Speedup</th>
                               </tr>
                               <tr>
                                 <td><b>Mean</b></td>
-                                <td>0.6947258</td>
-                                <td>1.2087168</td>
+                                <td>0.6947258 s</td>
+                                <td>1.2087168 s</td>
+                                <td>0.5747630</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Brightness variation</figcaption>
+                            <figcaption class="text-figure">Mean time of 5 iterations for each version of the Brightness variation and mean speedup</figcaption>
                         </figure>
                         <p class="entry-p">
                             <br><u>Sharpening filters</u>
@@ -179,19 +187,22 @@
                                 <th></th>
                                 <th>Sequential version</th>
                                 <th>GPU accelerated version</th>
+                                <th>Speedup</th>
                               </tr>
                               <tr>
                                 <td><b>High-Pass Mean</b></td>
-                                <td>2.3634624</td>
-                                <td>1.733152</td>
+                                <td>2.3634624 s</td>
+                                <td>1.7331520 s</td>
+                                <td>1.3636786</td>
                               </tr>
                               <tr>
                                 <td><b>Low-Pass Mean</b></td>
-                                <td>1.4051648</td>
-                                <td>1.7541376</td>
+                                <td>1.4051648 s</td>
+                                <td>1.7541376 s</td>
+                                <td>0.8010573</td>
                               </tr>
                             </table>
-                            <figcaption class="text-figure">Mean time (in seconds) of 5 iterations for each version of the Sharpening filters</figcaption>
+                            <figcaption class="text-figure">Mean time of 5 iterations for each version of the Sharpening filters and mean speedup</figcaption>
                         </figure>
                     </div>
                 </div>
